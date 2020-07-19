@@ -9,10 +9,10 @@ from random import choice
 
 def get_human_move() -> str:
     valid_input: list = ['R', 'P', 'S', 'Q']
-    human_move: str = input("please choose 'R' for rock, 'P' for paper, 'S' for scissors or 'Q' for quiz: ").upper()
+    human_move: str = input("please choose 'R' for rock, 'P' for paper, 'S' for scissors or 'Q' for quit: ").upper()
     while human_move not in valid_input:
         print("Invalid input.")
-        human_move = input("please choose 'R' for rock, 'P' for paper, 'S' for scissors or 'Q' for quiz: ").upper()
+        human_move = input("please choose 'R' for rock, 'P' for paper, 'S' for scissors or 'Q' for quit: ").upper()
     return human_move
 
 
