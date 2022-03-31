@@ -14,7 +14,9 @@ class Fraction:
             raise ZeroDivisionError('0 cannot be a denominator!')
 
     def __str__(self) -> str:
-        """ return a String to display fractions """
+        """
+        return a String to display fractions 
+        """
         return str(self.numerator) + '/' + str(self.denominator)
         # return f"{self.numerator}/{self.denominator}"
 
@@ -55,12 +57,16 @@ class Fraction:
         return Fraction(num, den)
 
     def equal(self, other: "Fraction") -> bool:
-        """ return True/False if the two fractions are equivalent """
+        """
+        return True/False if the two fractions are equivalent
+        """
         return (self.numerator * other.denominator) == (other.numerator * self.denominator)
 
 
 def test_suite() -> None:
-    """ test weather the Fraction work correctly """
+    """
+    test weather the Fraction work correctly
+    """
     f12: Fraction = Fraction(1, 2)
     f34: Fraction = Fraction(3, 4)
     f56: Fraction = Fraction(5, 6)
@@ -72,8 +78,9 @@ def test_suite() -> None:
 
 
 def get_number(prompt: str) -> float:
-    """ read and return a number from the user.
-        Loop until the user provides a valid number.
+    """ 
+    read and return a number from the user.
+    Loop until the user provides a valid number.
     """
     while True:
         inp: str = input(prompt)
@@ -84,7 +91,9 @@ def get_number(prompt: str) -> float:
 
 
 def get_fraction() -> Fraction:
-    """ Ask the user for a numerator and denominator and return a valid Fraction """
+    """
+    Ask the user for a numerator and denominator and return a valid Fraction
+    """
     while True:
         numerator: float = get_number("Please input numerator:")
         denominator: float = get_number("Please input denominator:")
@@ -96,8 +105,7 @@ def get_fraction() -> Fraction:
 
 def compute(f1: Fraction, operator: str, f2: Fraction) -> None:
     """
-    Given two fractions and an operator, return the result
-    of applying the operator to the two fractions
+    Given two fractions and an operator, return the result of applying the operator to the two fractions
     """
     okay: bool = True
     # result: Optional[Union[Fraction, bool]] = None
